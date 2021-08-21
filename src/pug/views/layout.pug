@@ -1,0 +1,77 @@
+html(lang="en")
+
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width", initial-scale=1.0)
+    meta(http-equiv="Content-Security-Policy", content="img-src 'self' data: https://static.buddi.io;")
+    block meta
+
+    // realfavicongenerator.net favicons
+
+    link(rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png")
+    //- link(rel="manifest" href="../site.webmanifest")
+    link(rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#00e0a7")
+    meta(name="msapplication-TileColor" content="#1a1a1a")
+    meta(name="theme-color" content="#ffffff")
+
+    // realfavicongenerator.net favicons
+
+    //- link(rel="stylesheet", href="../scss/styles.scss")
+
+
+  body
+    //- div.announcement-bar.container-fluid.text-center.text-light
+    //-   p.m-0 Grand opening sale! 5% off everything! 
+
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      div.container
+        a.navbar-brand(href="./", aria-label="Home")
+          //- img(src=require("../images/logo.svg"), role="img" focusable="false" alt="Rightpuff Cannabis")
+        button(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation").navbar-toggler
+          span.navbar-toggler-icon
+        div#navbarSupportedContent.collapse.navbar-collapse     
+          ul.navbar-nav.ms-auto 
+            li.nav-item
+              a(href="./").nav-link Home 
+            li.nav-item 
+              a(href="./shop.html").nav-link Shop 
+            li.nav-item 
+              a(href="./contact.html").nav-link Contact Us
+
+    main 
+      block content
+
+    footer#footer.container-fluid.py-4.bg-dark
+      div.container
+        h4.mt-3 Contact Us 
+        dl 
+          dt Address
+          dd 919 Commissioners Rd E Suite 3 • London, ON N5Z 3H9 • Canada 
+          dt Phone 
+          dd 519-649-0111
+          dt Email 
+          dd team@rightpuff.ca
+        h4 Terms and Conditions 
+        a(href="./refund-policy.html") Refund Policy  
+        div.social.d-flex.justify-content-center
+          a(href="https://facebook.com/rightpuffcanna", target="_blank", aria-label="Facebook").m-3
+            i.bi.bi-facebook.text-light
+          a(href="https://instagram.com/rightpuffcanna", target="_blank", aria-label="Instagram").m-3
+            i.bi.bi-instagram.text-light
+        p.copyright.text-center 
+          small Copyright © 2021 Rightpuff Cannabis. All Rights Reserved.
+      
+    div#age-check-modal(data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true").modal.fade
+      div.modal-dialog.modal-dialog-centered 
+        div.modal-content 
+          div.modal-header 
+            h5(id="staticBackdropLabel").modal-title ADULT CONTENT 
+          div.modal-body 
+            p. 
+              This website is intended for adults only; content should not be shared with minors. By clicking yes you confirm that you are 19+/legal age to view.
+          div.modal-footer 
+            button(type="button" data-bs-dismiss="modal").btn.btn-secondary#close-age-modal-yes Yes, let me in.
+            a(href="https://www.google.com/")#close-age-modal-no
+              button(type="button").btn.btn-secondary No, take me back.
