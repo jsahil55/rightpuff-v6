@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const CopyPlugin = require("copy-webpack-plugin");
@@ -18,7 +19,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader",
+                  ]
             },
             {
                 test: /\.js$/,
@@ -33,6 +38,8 @@ module.exports = {
     },
 
     plugins: [
+        new MiniCssExtractPlugin(),
+
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(__dirname, "src", "pug", "index.pug")
