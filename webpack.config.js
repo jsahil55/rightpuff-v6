@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const paths = [
     '/',
@@ -25,7 +26,7 @@ module.exports = {
                 use: ["babel-loader"]
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot)$/i,
                 type: 'asset/resource'
             }
         ]
@@ -53,12 +54,18 @@ module.exports = {
             
         }),
 
-        new SitemapPlugin({ base: 'https://www.rightpuff.ca', paths })
-      ],
-    
+        new SitemapPlugin({ base: 'https://www.rightpuff.ca', paths }),
+
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/images/favicon", to: "images/favicon" },
+            ]
+        })
+    ],
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        assetModuleFilename: 'images/[hash][ext][query]'
     },
 };
