@@ -44,6 +44,6 @@ function checkCookie() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    checkCookie();
+    setTimeout(function() { checkCookie(); }, 1000);
 
 });
