@@ -39,14 +39,27 @@ module.exports = {
             dest: 'index.html',
             inline: true,
             minify: true,
-            extract: true,
+            // extract: true,
             width: 375,
             height: 565,
             penthouse: {
               blockJSRequests: false,
             }
           }),
-          
+
+          new HtmlCriticalPlugin({
+            base: path.join(path.resolve(__dirname, ".."), 'dist/'),
+            src: 'shop.html',
+            dest: 'shop.html',
+            inline: true,
+            minify: true,
+            // extract: true,
+            width: 375,
+            height: 565,
+            penthouse: {
+              blockJSRequests: false,
+            }
+          }),
     ],
 
     optimization: {
