@@ -1,14 +1,6 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
-const paths = [
-    '/',
-    '/shop',
-    '/contact',
-    '/refund-policy'
-]
 
 module.exports = {
     module: {
@@ -16,14 +8,6 @@ module.exports = {
             {
                 test: /\.pug$/,
                 loader: 'pug-loader'
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader",
-                  ]
             },
             {
                 test: /\.js$/,
@@ -38,43 +22,39 @@ module.exports = {
     },
 
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css"
-        }),
-
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, "src", "pug", "index.pug")
+            template: path.resolve(__dirname, "..", "src", "pug", "index.pug")
             
         }),
         new HtmlWebpackPlugin({
             filename: 'shop.html',
-            template: path.resolve(__dirname, "src", "pug", "shop.pug")
+            template: path.resolve(__dirname, "..", "src", "pug", "shop.pug")
        
         }),
         new HtmlWebpackPlugin({
             filename: 'contact.html',
-            template: path.resolve(__dirname, "src", "pug", "contact.pug")
+            template: path.resolve(__dirname, ".." ,"src", "pug", "contact.pug")
        
         }),
         new HtmlWebpackPlugin({
             filename: 'refund-policy.html',
-            template: path.resolve(__dirname, "src", "pug", "refund-policy.pug")
+            template: path.resolve(__dirname, "..", "src", "pug", "refund-policy.pug")
             
         }),
 
-        new SitemapPlugin({ base: 'https://www.rightpuff.ca', paths }),
-
         new CopyPlugin({
             patterns: [
-              { from: "./src/images/favicon", to: "images/favicon" },
+              { from: path.resolve(__dirname, "..", "src", "images", "favicon"), to: path.resolve(__dirname, "..", "dist", "images", "favicon") },
             ]
-        })
+        }),
     ],
+    
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, "..", "dist"),
         clean: true,
         assetModuleFilename: 'images/[hash][ext][query]'
     },
+    
 };

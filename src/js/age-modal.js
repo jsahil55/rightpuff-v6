@@ -1,3 +1,4 @@
+import Modal from 'bootstrap/js/dist/modal';
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -19,7 +20,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var ageCheckModal = new bootstrap.Modal(document.getElementById('age-check-modal'), {});
+    var ageCheckModal = new Modal(document.getElementById('age-check-modal'), {});
     var age = getCookie("ageVerify");
     
     if (age === "over19") {   
