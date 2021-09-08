@@ -1,31 +1,15 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@200;400&display=swap");
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import 'custom';
+@import 'bootstrap';
 
-@import "../../node_modules/bootstrap/scss/functions.scss";
-@import "../../node_modules/bootstrap/scss/variables.scss";
-@import "../../node_modules/bootstrap/scss/mixins.scss";
-@import "../../node_modules/bootstrap/scss/utilities.scss";
-
-@import "../../node_modules/bootstrap/scss/root.scss";
-@import "../../node_modules/bootstrap/scss/reboot.scss";
-@import "../../node_modules/bootstrap/scss/type.scss";
-@import "../../node_modules/bootstrap/scss/containers.scss";
-@import "../../node_modules/bootstrap/scss/grid.scss";
-@import "../../node_modules/bootstrap/scss/nav.scss";
-@import "../../node_modules/bootstrap/scss/navbar.scss";
-@import "../../node_modules/bootstrap/scss/transitions.scss";
-@import "../../node_modules/bootstrap/scss/buttons.scss";
-@import "../../node_modules/bootstrap/scss/modal.scss";
-
-@import "../../node_modules/bootstrap/scss/utilities/api.scss";
+//-------------------------STYLES--------------------------//
 
 .navbar-brand {
     width: 250px;
     height: 50px;
     background: url(../images/logo.svg) no-repeat;
-  }
+}
   
 .header-home {
     height: 95vh;
