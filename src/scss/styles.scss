@@ -78,6 +78,19 @@
     z-index: 1000!important;
 }
 
+.hours {
+    text-align: center;
+    background: #eee;
+    border: 1px solid grey;
+    max-width: 250px;
+    padding: 20px;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
 .icon-box {
 
     text-align: center;
