@@ -12,7 +12,7 @@
 }
   
 .header-home {
-    height: 95vh;
+    height: 50vh;
     background-image: linear-gradient(to right bottom, rgba(26, 26, 26, 0.8), rgba(47, 45, 60, 0.8)), url(../images/hero1.webp);
     background-size: cover;
     background-position: top;
@@ -26,8 +26,7 @@
     background-position: top;
     position: relative;
 }
-  
-  
+
 .heading-primary {
     color: $gray-400;
 
@@ -58,10 +57,6 @@
     background-color: $gray-800;
 }
 
-.category-card {
-    width: 18rem;
-}
-
 #footer {
     color: rgba(255, 255, 255, 0.55);
 }
@@ -76,19 +71,6 @@
 
 .buddi-online-menu .bdi-main-nav-z {
     z-index: 1000!important;
-}
-
-.hours {
-    text-align: center;
-    background: #eee;
-    border: 1px solid grey;
-    max-width: 250px;
-    padding: 20px;
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
 }
 
 .icon-box {

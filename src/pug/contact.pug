@@ -7,16 +7,17 @@ block meta
 block content
   div.container.py-5
     h1.mb-5 Contact Us
-    div.hours.align-self-center
-      h2 Hours
-      ul
-        li SUN: 11-5pm
-        li MON: 9-9pm
-        li TUE: 9-9pm
-        li WED: 9-9pm
-        li THU: 9-9pm
-        li FRI: 9-9pm
-        li SAT: 9-9pm 
+    div(style="width: 18rem;").card
+      div.card-body 
+        h2.card-title Hours
+        ul(style="list-style-type: none; padding: 0;").card-text
+          li SUN: 11-5pm
+          li MON: 9-9pm
+          li TUE: 9-9pm
+          li WED: 9-9pm
+          li THU: 9-9pm
+          li FRI: 9-9pm
+          li SAT: 9-9pm 
     div.row.my-5
       div.col-12.col-md-4.icon-box
         i.icon-box__icon.bi.bi-geo-alt-fill

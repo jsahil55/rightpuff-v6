@@ -1,28 +1,32 @@
 extends views/layout.pug
 
 block meta
-  title Rightpuff Cannabis - Home
-  meta(name="description" content="Welcome to Rightpuff Cannabis. Browse our selection of cannabis products and smoking accesories.")
+  title Rightpuff Cannabis - Cannabis Flower, Pre-Rolls, Vapes and More!
+  meta(name="description" content="Browse our selection of cannabis products and smoking accessories.")
 
 block content
-  div.container-fluid
-    div.row.header-home.p-1.p-5-lg.d-flex.align-items-center.justify-content-center
-      div.col
-        h1.heading-primary.text-center
-          span.heading-primary--main Rightpuff
-          span.heading-primary--sub.mt-3 Smoking done right
-          a(href="./shop.html")
-            button(type="button").btn.btn-lg.btn-light.text-dark.mt-4 SHOP NOW
+  div.header-home.p-1.p-5-lg.d-flex.align-items-center.justify-content-center
+      h1.heading-primary.text-center
+        span.heading-primary--main Rightpuff
+        span.heading-primary--sub.mt-3 Smoking done right
+        a(href="./shop.html")
+          button(type="button").btn.btn-lg.btn-light.text-dark.mt-4 SHOP NOW
   section.container.py-5
-    div.row.row-cols-1.row-cols-md-2.g-4.justify-content-center
-      div.card.category-card
-        img.card-img-top(src=require("../images/flower.jpg"))
-        div.card-body 
-          p.
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-      div.card.category-card
-        img.card-img-top(src=require("../images/flower.jpg"))
-        div.card-body 
-          p.
-            Some quick example text to build on the card title and make up the bulk of the card's content.                       
-            
+    h2 Browse our Selection
+    div.row
+      div.col-md-4
+        div.card
+          img.card-img-top(src=require("../images/flower.jpg"))
+          div.card-body
+            h3.card-title Flower 
+            p.
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+      div.col-md-4
+        div.card
+          img.card-img-top(src=require("../images/flower.jpg"))
+          div.card-body
+            h3.card-title Flower 
+            p.
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+        
+        
