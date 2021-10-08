@@ -1,7 +1,7 @@
 extends views/layout.pug
 
 block meta
-  title Rightpuff Cannabis - Cannabis Flower, Pre-Rolls, Vapes and More!
+  title Rightpuff Cannabis - Cannabis Dispensary in London, Ontario
   meta(name="description" content="Browse our selection of cannabis products and smoking accessories.")
 
 block content
@@ -14,19 +14,57 @@ block content
   section.container.py-5
     h2 Browse our Selection
     div.row
-      div.col-md-4
-        div.card
-          img.card-img-top(src=require("../images/flower.jpg"))
-          div.card-body
-            h3.card-title Flower 
-            p.
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-      div.col-md-4
-        div.card
-          img.card-img-top(src=require("../images/flower.jpg"))
-          div.card-body
-            h3.card-title Flower 
-            p.
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-        
-        
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/flower")
+          div.card
+            img.card-img-top(alt="Flower" src=require("../images/flower.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Flower 
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/pre-rolls")
+          div.card
+            img.card-img-top(alt="Pre-Rolls" src=require("../images/pre-rolls.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Pre-Rolls
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/vape-cartridges")
+          div.card
+            img.card-img-top(alt="Vape Cartridges" src=require("../images/vape-cartridges.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Vape Cartridges  
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/concentrates")
+          div.card
+            img.card-img-top(alt="Concentrates" src=require("../images/concentrates.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Concentrates
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/edibles")
+          div.card
+            img.card-img-top(alt="Edibles" src=require("../images/edibles.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Edibles
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/beverages")
+          div.card
+            img.card-img-top(alt="Beverages" src=require("../images/beverages.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Beverages
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/oils-and-capsules")
+          div.card
+            img.card-img-top(alt="Oils and Capsules" src=require("../images/oils-capsules.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Oils and Capsules
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/topicals")
+          div.card
+            img.card-img-top(alt="Topicals" src=require("../images/topicals.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Topicals
+      div.col-md-4.mt-4
+        a(href="../shop#/menu/collections/accessories")
+          div.card
+            img.card-img-top(alt="Accessories" src=require("../images/accessories.jpg"))
+            div.card-body.bg-dark
+              h3.card-title.text-center Accessories                                         
